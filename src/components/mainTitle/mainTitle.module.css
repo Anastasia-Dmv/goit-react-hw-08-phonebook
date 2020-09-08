@@ -1,0 +1,13 @@
+/* .mainTitle-enter {
+  opacity: 0;
+}
+.mainTitle-active {
+  opacity: 1;
+  transition: opacity 5000ms linear;
+}
+.mainTitle-exit {
+  opacity: 1;
+}
+.mainTitle-exit-active {
+  transition: opacity 5000ms linear;
+} */
