@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import routesInfo from "../routes";
+//import routesInfo from "../routes";
 import { Route, Redirect } from "react-router-dom";
-import routes from "./utils/utils";
+//import routes from "./utils/utils";
 
 const PublicRoute = ({
   component: MyComponent,

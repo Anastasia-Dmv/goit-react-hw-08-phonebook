@@ -4,13 +4,22 @@ import contactsReducer from "./contact/contact-reducer";
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import authReducers from "./auth/authReducers";
 import storage from "redux-persist/lib/storage";
-import { persistStore, persistReducer } from "redux-persist";
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from "redux-persist";
 
 const middleware = [
   ...getDefaultMiddleware({
-    // serializableCheck: {
-    //   ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    // },
+    serializableCheck: {
+      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+    },
   }),
   // logger,
 ];

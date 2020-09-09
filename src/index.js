@@ -11,14 +11,15 @@ ReactDOM.render(
   <div>
     {/* <React.StrictMode> */}
 
-    <BrowserRouter>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
           <AppNew />
           {/* <App /> */}
-        </PersistGate>
-      </Provider>
-    </BrowserRouter>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
+
     {/* </React.StrictMode> */}
   </div>,
 
