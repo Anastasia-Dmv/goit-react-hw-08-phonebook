@@ -6,7 +6,20 @@ const UserMenu = ({ name, avatar, logout }) => {
   return (
     <div className="userMenu">
       <div className="userMenu-wrapper">
-        <img src={avatar} alt={name} width="32"></img>
+        <div className="userMenu-avatar">
+          <img
+            className="userMenu-avatar_img"
+            // className="userMenu-wrapper"
+            // style={{
+            //   borderRadius: "50%",
+            //   backgroundImage: "url('../../image/pngegg.png",
+            // }}
+            // className="userMenu-avatar"
+            src={avatar}
+            alt={name}
+            width="32"
+          ></img>
+        </div>
         <span className="userMenu-name">Welcome {name}!</span>
       </div>
       <button type="button" className="logout-button" onClick={logout}>

@@ -332,3 +332,18 @@ img {
 .userMenu-name {
   padding-top: 6px;
 }
+.userMenu-avatar {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  margin-right: 5px;
+  overflow: hidden;
+  /* border: solid 1px black; */
+  border-radius: 50%;
+}
+.userMenu-avatar_img {
+  width: 120%;
+  height: 120%;
+  /* margin: 0 auto; */
+  background-color: #fefeff;
+}
