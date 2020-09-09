@@ -3,7 +3,7 @@ import authActions from "./authActions";
 
 axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com";
 
-const token = {
+export const token = {
   set(token) {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
   },

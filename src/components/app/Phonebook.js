@@ -15,15 +15,8 @@ import contactSelectors from "../../redux/contact/contact-selectors";
 //import contactActions from "../../redux/contact/contact-actions";
 //import { items } from "../../redux/contact/contact-reducer";
 
-class App extends Component {
+class Phonebook extends Component {
   state = {
-    // contacts: [
-    //   { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
-    //   { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
-    //   { id: "id-3", name: "Eden Clements", number: "645-17-79" },
-    //   { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
-    // ],
-    // filter: "",
     showContacts: false,
   };
   componentDidMount() {
@@ -160,5 +153,5 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   onFetchContacts: contactsOperation.fetchContacts,
 };
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Phonebook);
 //export default App;

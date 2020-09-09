@@ -1,5 +1,6 @@
 import contactsActions from "./contact-actions";
 import axios from "axios";
+import { token } from "../auth/authOperations";
 
 axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com";
 const addContact = (name, number) => (dispatch) => {
@@ -22,8 +23,12 @@ const addContact = (name, number) => (dispatch) => {
     .catch((error) => dispatch(contactsActions.addContactError(error)));
 };
 
-const fetchContacts = () => (dispatch) => {
+const fetchContacts = () => (dispatch, getState) => {
   dispatch(contactsActions.fetchContactsRequest());
+  const {
+    auth: { token: persistedToken },
+  } = getState();
+  token.set(persistedToken);
   axios
     .get("/contacts")
     .then(({ data }) => {

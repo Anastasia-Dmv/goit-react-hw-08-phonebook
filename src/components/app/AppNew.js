@@ -6,7 +6,7 @@ import LoginView from "../../views/LoginView";
 import RegisterView from "../../views/RegisterView";
 //import AppBar from "./Navigation";
 //import Navigation from "./Navigation";
-import App from "./App";
+import Phonebook from "./Phonebook";
 //import AuthNav from "./AuthNav";
 //import UserMenu from "./UserMenu";
 import Header from "./Header";
@@ -42,7 +42,7 @@ class AppNew extends Component {
             <PrivateRoute
               path={routes.contacts}
               redirectTo={routes.login}
-              component={App}
+              component={Phonebook}
             />
 
             {/* <Route component={NotFoundView} /> */}
