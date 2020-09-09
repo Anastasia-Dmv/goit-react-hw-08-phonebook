@@ -29,25 +29,25 @@ class LoginView extends Component {
           <h1>Login page</h1>
           <form onSubmit={this.handleSubmit} className="form">
             <label>
-              Email
+              {/* Email */}
               <input
                 className="input"
                 type="text"
                 name="email"
                 value={email}
                 onChange={this.handleChange}
-                placeholder="Enter name"
+                placeholder="Enter email"
               ></input>
             </label>
             <label>
-              Password
+              {/* Password */}
               <input
                 className="input"
                 type="password"
                 value={password}
                 onChange={this.handleChange}
                 name="password"
-                placeholder="Enter number"
+                placeholder="Enter password"
               ></input>
             </label>
             <button type="submit" className="addContact-button signIn-button">
