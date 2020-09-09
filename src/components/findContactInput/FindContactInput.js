@@ -8,6 +8,7 @@ function FindContactInput({ value, onChange }) {
     <div className="find-input_frame ">
       <label>
         <input
+          placeholder="Find contact..."
           className="input"
           type="text"
           value={value}

@@ -75,7 +75,7 @@ img {
   /* width: 280px; */
 }
 a {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 8px;
   margin-right: 5px;
 }
@@ -126,16 +126,6 @@ a {
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); */
 }
 
-.addContact-button:hover,
-.addContact-button:focus,
-.logout-button:hover,
-.logout-button:focus {
-  background-color: rgba(255, 255, 255, 0.486);
-  /* background-color: #303f9f; */
-  outline: none;
-  color: white;
-}
-
 .navigation {
   /* margin: 0 auto;
   min-width: 320px;
@@ -160,18 +150,20 @@ a {
   height: 500px;
 }
 .nav-link {
-  color: white;
+  color: #303f9f;
+  background-color: #fdfdfd8f;
   /* color: rgb(85, 146, 187); */
   text-decoration: none;
   padding: 6px 10px;
   font-weight: 600;
 }
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  /* color: white; */
+  box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.2);
 }
 .nav-link_active {
-  color: rgb(15, 76, 156);
-  background: rgba(255, 255, 255, 0.479);
+  color: white;
+  background-color: #303f9f;
   /* color: rgb(15, 76, 156); */
   text-decoration: none;
   padding: 6px 10px;
@@ -193,15 +185,22 @@ a {
 }
 
 .logout-button {
+  position: absolute;
+  top: -45px;
+  right: -6px;
+  /* transform: translate(-50%, -50%); */
   outline: none;
   margin: 5px;
-  /* padding: 4px 16px; */
-  border-radius: 2px;
-  background-color: #6a7de9f8;
+  font-family: roboto;
+  padding: 4px 16px;
+  border-radius: 8px;
+  /* background-color: rgba(255, 255, 255, 0.486); */
+  /* background-color: #303f9f; */
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: inline-block;
-  color: #fff;
+  color: #303f9f;
+
   border: 0;
   text-decoration: none;
   cursor: pointer;
@@ -210,9 +209,19 @@ a {
   line-height: 24px;
   font-style: normal;
   font-weight: 500;
-  width: 50px;
+  width: 70px;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+.addContact-button:hover,
+.addContact-button:focus,
+.logout-button:hover,
+.logout-button:focus {
+  /* background-color: rgba(255, 255, 255, 0.486); */
+  /* background-color: #303f9f; */
+  background-color: #303f9f;
+  outline: none;
+  color: #fff;
 }
 .signIn-button {
   margin: 15px 0;
@@ -316,7 +325,7 @@ a {
 }
 .mainTitle-enter {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-15%);
 }
 .mainTitle-active {
   opacity: 1;
@@ -328,12 +337,12 @@ a {
   transform: translateX(0);
 }
 .mainTitle-exit-active {
-  transform: translateX(-100%);
+  transform: translateX(-15%);
   transition: opacity 5000ms linear;
 }
 /* ============title======= */
 .mainTitle-slideIn-appear {
-  transform: translateX(-100%);
+  transform: translateX(-15%);
 }
 .mainTitle-slideIn-appear-active {
   transform: translateX(0);
@@ -347,7 +356,7 @@ a {
 } */
 .taskList-fade-enter {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-15%);
 }
 .taskList-fade-enter-active {
   opacity: 1;
@@ -360,12 +369,12 @@ a {
 }
 .taskList-fade-exit-active {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-15%);
   transition: all 250ms linear;
 }
 .taskList-fade-exit-done {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-15%);
   transition: all 250ms linear;
 }
 /* =================find======= */
@@ -426,11 +435,15 @@ a {
 
 .userMenu {
   display: flex;
+  position: relative;
 
   justify-content: space-between;
 }
 .userMenu-name {
-  padding-top: 6px;
+  padding-top: 10px;
+  font-size: 18px;
+  color: #303f9f;
+  font-weight: 500;
 }
 .userMenu-avatar {
   width: 32px;
