@@ -68,7 +68,9 @@ img {
 }
 
 .addContact-button:hover,
-.addContact-button:focus {
+.addContact-button:focus,
+.logout-button:hover,
+.logout-button:focus {
   background-color: #303f9f;
   outline: none;
 }

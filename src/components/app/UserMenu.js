@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import authOperations from "../../redux/auth/authOperations";
-import user from "../../image/pngegg.png";
+// import user from "../../image/pngegg.png";
+import user from "../../image/avatar.png";
+
 const UserMenu = ({ name, avatar, logout }) => {
   return (
     <div className="userMenu">
