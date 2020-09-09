@@ -17,8 +17,8 @@ class LoginView extends Component {
   };
   handleSubmit = (evt) => {
     evt.preventDefault();
-    const { email, password } = this.state;
-    this.props.onLogin(email, password);
+    //const { email, password } = this.state;
+    this.props.onLogin({ ...this.state });
     //this.setState({...this.loginInitialState})
   };
   render() {
@@ -57,4 +57,4 @@ class LoginView extends Component {
     );
   }
 }
-export default connect(null, { onLogin: authOperations.onLogin })(LoginView);
+export default connect(null, { onLogin: authOperations.login })(LoginView);

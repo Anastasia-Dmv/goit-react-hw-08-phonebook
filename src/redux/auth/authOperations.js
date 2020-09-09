@@ -16,10 +16,10 @@ const register = (credentials) => async (dispatch) => {
   dispatch(authActions.registerRequest());
   console.log(credentials);
   try {
-    const response = await axios.post("/users/signup", credentials);
+    const response = await axios.post("users/signup", credentials);
 
     console.log("response", response);
-    //token.set(response.data.token);
+    token.set(response.data.token);
     dispatch(authActions.registerSuccess(response.data));
   } catch (error) {
     dispatch(authActions.registerError(error.message));
@@ -30,9 +30,9 @@ const login = (credentials) => async (dispatch) => {
   dispatch(authActions.loginRequest());
 
   try {
-    const response = await axios.post("/users/login", credentials);
+    const response = await axios.post("users/login", credentials);
 
-    token.set(response.datate.token);
+    token.set(response.data.token);
     dispatch(authActions.loginSuccess(response.data));
   } catch (error) {
     dispatch(authActions.loginError(error.message));
@@ -43,10 +43,10 @@ const logout = () => async (dispatch) => {
   dispatch(authActions.logoutRequest());
 
   try {
-    await axios.post("/users/logout");
+    await axios.post("users/logout");
 
     token.unset();
-    dispatch(authActions.logoutRequest.logoutSuccess());
+    dispatch(authActions.logoutSuccess());
   } catch (error) {
     dispatch(authActions.logoutError(error.message));
   }
