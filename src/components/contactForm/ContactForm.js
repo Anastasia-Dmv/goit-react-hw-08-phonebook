@@ -55,7 +55,7 @@ class ContactForm extends Component {
         </CSSTransition>
         <form onSubmit={this.handleSubmit} className="form">
           <label>
-            Name
+            {/* Name */}
             <input
               className="input"
               type="text"
@@ -66,7 +66,7 @@ class ContactForm extends Component {
             ></input>
           </label>
           <label>
-            Number
+            {/* Number */}
             <input
               className="input"
               type="tel"

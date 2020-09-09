@@ -5,10 +5,12 @@ import { connect } from "react-redux";
 
 function Header({ token }) {
   return (
-    <header className="navigation">
-      <section className=" wrapper">
-        <Navigation />
-        {token && <UserMenu />}
+    <header>
+      <section className="navigation">
+        <div className=" wrapper">
+          <Navigation />
+          {token && <UserMenu />}
+        </div>
       </section>
     </header>
   );

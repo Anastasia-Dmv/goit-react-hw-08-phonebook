@@ -77,7 +77,7 @@ class Phonebook extends Component {
     //const filteredContacts = this.getFilteredContacts();
     // const { IsLoadingContacts } = this.props;
     return (
-      <div>
+      <div className="container ">
         <CSSTransition
           in={true}
           appear={true}

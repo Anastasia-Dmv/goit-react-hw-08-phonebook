@@ -24,36 +24,38 @@ class LoginView extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <section className="wrapper">
-        <h1>Login page</h1>
-        <form onSubmit={this.handleSubmit} className="form">
-          <label>
-            Email
-            <input
-              className="input"
-              type="text"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-              placeholder="Enter name"
-            ></input>
-          </label>
-          <label>
-            Password
-            <input
-              className="input"
-              type="password"
-              value={password}
-              onChange={this.handleChange}
-              name="password"
-              placeholder="Enter number"
-            ></input>
-          </label>
-          <button type="submit" className="addContact-button">
-            Sign in
-          </button>
-        </form>
-      </section>
+      <div className=" container">
+        <section className="wrapper ">
+          <h1>Login page</h1>
+          <form onSubmit={this.handleSubmit} className="form">
+            <label>
+              Email
+              <input
+                className="input"
+                type="text"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+                placeholder="Enter name"
+              ></input>
+            </label>
+            <label>
+              Password
+              <input
+                className="input"
+                type="password"
+                value={password}
+                onChange={this.handleChange}
+                name="password"
+                placeholder="Enter number"
+              ></input>
+            </label>
+            <button type="submit" className="addContact-button signIn-button">
+              Sign in
+            </button>
+          </form>
+        </section>
+      </div>
     );
   }
 }
